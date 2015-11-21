@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console1", "ProgramacaoOrie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "ProgramacaoOrientadaObjetos\Calculadora\Calculadora.csproj", "{4CC18A4C-C968-4062-844E-54D6B08218D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaProva", "ProgramacaoOrientadaObjetos\MediaProva\MediaProva.csproj", "{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{4CC18A4C-C968-4062-844E-54D6B08218D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CC18A4C-C968-4062-844E-54D6B08218D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CC18A4C-C968-4062-844E-54D6B08218D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +36,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EBD870B0-3DDF-4C37-BDEE-E11DE4E679A5} = {5EBD3E42-8F9B-4418-AEBF-D1DEEA7B1205}
 		{4CC18A4C-C968-4062-844E-54D6B08218D8} = {5EBD3E42-8F9B-4418-AEBF-D1DEEA7B1205}
+		{FD7F2BC4-0F9E-40AA-9A2D-DA60787FD5C9} = {5EBD3E42-8F9B-4418-AEBF-D1DEEA7B1205}
 	EndGlobalSection
 EndGlobal

@@ -62,30 +62,69 @@ namespace Console1
             //    variavel2++;
             //}
 
-            //DO WHILE
-            char opcao;
+            ////DO WHILE
+            //char opcao;
+            //do
+            //{
+            //    Console.Write("Escolha a opção [s] Sair - [c] Cadastrar - [p] Pesquisar: ");
+            //    opcao = Console.ReadKey().KeyChar;
+            //    Console.WriteLine();
+
+            //    switch(opcao)
+            //    {
+            //        case 'c':
+            //            Console.WriteLine("Cadastro");
+            //            break;
+            //        case 'p':
+            //            Console.WriteLine("Pesquisa");
+            //            break;
+            //        case 's':
+            //            break;
+            //        default:
+            //            Console.WriteLine("Opção inexistente!");
+            //            break;
+            //    }
+
+            //} while (opcao != 's');
+
+            ////LIST
+            //List<int> numeros = new List<int>();
+            //numeros.Add(1);
+            //numeros.Add(2);
+            //numeros.Add(3);
+            //numeros.Add(4);
+            //numeros.Add(5);
+
+            //numeros.Remove(2);
+            //numeros.RemoveAt(2);
+            //numeros.RemoveRange(1, 2);
+
+
+            //foreach (var numero in numeros)
+            //{
+            //    Console.WriteLine(numero);
+            //}
+
+            //LIST 2
+            List<Pessoa> numeros = new List<Pessoa>();
+            string nome = "";
             do
             {
-                Console.Write("Escolha a opção [s] Sair - [c] Cadastrar - [p] Pesquisar: ");
-                opcao = Console.ReadKey().KeyChar;
-                Console.WriteLine();
+                Console.Write("Digite um nome: ");
+                nome = Console.ReadLine();
 
-                switch(opcao)
-                {
-                    case 'c':
-                        Console.WriteLine("Cadastro");
-                        break;
-                    case 'p':
-                        Console.WriteLine("Pesquisa");
-                        break;
-                    case 's':
-                        break;
-                    default:
-                        Console.WriteLine("Opção inexistente!");
-                        break;
-                }
+                if (nome != "sair")
+                    numeros.Add(new Pessoa { Nome = nome });
+                Console.Clear();
+            } while (nome != "sair");
 
-            } while (opcao != 's');
+            Console.Clear();
+            Console.WriteLine("Nomes Digitados: ");
+
+            foreach (var numero in numeros)
+            {
+                Console.WriteLine(numero.Nome);
+            }
 
             //Console.WriteLine("Começou o programa");
             Console.ReadKey();

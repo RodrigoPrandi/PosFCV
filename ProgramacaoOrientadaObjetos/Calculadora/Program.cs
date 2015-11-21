@@ -15,7 +15,7 @@ namespace Calculadora
             Console.WriteLine("Resultado: " + Multiplicar(23, 13));
             Console.WriteLine("Resultado: " + Dividir(3455, 3));
 
-            Console.WriteLine("Resultado: " + Somar("Rodrigo", "Prandi"));
+            Console.WriteLine("Seu nome completo é: " + NomeCompleto("Rodrigo", "Prandi"));
 
             Console.ReadKey();
         }
@@ -30,7 +30,7 @@ namespace Calculadora
             return a + b;
         }
 
-        public static string Somar(string a, string b)
+        public static string NomeCompleto(string a, string b)
         {
             return a + " " + b;
         }
