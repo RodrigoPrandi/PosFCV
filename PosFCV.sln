@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio3-4-5", "Programac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio6", "ProgramacaoOrientadaObjetos\Exercicio6\Exercicio6.csproj", "{DFBD80E7-3A52-448E-AC1B-DA4DC612ACF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio7-8-9", "Exercicio7-8-9\Exercicio7-8-9.csproj", "{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio7-8-9", "ProgramacaoOrientadaObjetos\Exercicio7-8-9\Exercicio7-8-9.csproj", "{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
