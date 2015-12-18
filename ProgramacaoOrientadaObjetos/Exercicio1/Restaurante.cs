@@ -9,6 +9,18 @@ namespace Exercicio1
     class Restaurante
     {
         public double ValorConta { get; private set; }
+        public double ValorPorPessoa
+        {
+            get
+            {
+                if (ValorConta > 0)
+                    return ValorConta / _quantidadePessoas;
+                else
+                    return ValorConta;
+            }
+        }
+        private int _quantidadePessoas = 0;
+
         public Restaurante (double valorInicial)
         {
             ValorConta = valorInicial;
@@ -19,23 +31,17 @@ namespace Exercicio1
             ValorConta += valor;
         }
 
-        public double DividirConta(int quantidadePessoas)
+        public void DividirContaPor(int quantidadePessoas)
         {
-            return ValorConta / quantidadePessoas;
+            _quantidadePessoas = quantidadePessoas;
         }
 
-        public double PagarConta(double valorPago)
+        public void PagarParte()
         {
-            if (valorPago <= -ValorConta)
+            if (ValorConta > 0 && _quantidadePessoas > 0)
             {
-                ValorConta -= valorPago;
-                return 0;
-            }
-            else
-            {
-                var troco = valorPago - ValorConta;
-                ValorConta = 0;
-                return troco;
+                ValorConta -= ValorConta / _quantidadePessoas;
+                _quantidadePessoas--;
             }
         }
     }

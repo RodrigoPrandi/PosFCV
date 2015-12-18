@@ -29,37 +29,42 @@
         private void InitializeComponent()
         {
             this.btnAdicionarConsumacao = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonDividirConta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxConsumacao = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxQuantidadePessoas = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblValorTotal = new System.Windows.Forms.Label();
+            this.lblValorPorPessoa = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonPagarParte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdicionarConsumacao
             // 
-            this.btnAdicionarConsumacao.Location = new System.Drawing.Point(157, 38);
+            this.btnAdicionarConsumacao.Location = new System.Drawing.Point(130, 39);
             this.btnAdicionarConsumacao.Name = "btnAdicionarConsumacao";
             this.btnAdicionarConsumacao.Size = new System.Drawing.Size(75, 23);
             this.btnAdicionarConsumacao.TabIndex = 0;
             this.btnAdicionarConsumacao.Text = "Adicionar";
             this.btnAdicionarConsumacao.UseVisualStyleBackColor = true;
+            this.btnAdicionarConsumacao.Click += new System.EventHandler(this.btnAdicionarConsumacao_Click);
             // 
-            // button2
+            // buttonDividirConta
             // 
-            this.button2.Location = new System.Drawing.Point(91, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonDividirConta.Location = new System.Drawing.Point(91, 180);
+            this.buttonDividirConta.Name = "buttonDividirConta";
+            this.buttonDividirConta.Size = new System.Drawing.Size(75, 23);
+            this.buttonDividirConta.TabIndex = 1;
+            this.buttonDividirConta.Text = "Dividir Conta";
+            this.buttonDividirConta.UseVisualStyleBackColor = true;
+            this.buttonDividirConta.Click += new System.EventHandler(this.buttonDividirConta_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(316, 25);
+            this.label1.Location = new System.Drawing.Point(290, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 2;
@@ -72,12 +77,12 @@
             this.textBoxConsumacao.Size = new System.Drawing.Size(100, 20);
             this.textBoxConsumacao.TabIndex = 3;
             // 
-            // textBox2
+            // textBoxQuantidadePessoas
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 183);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxQuantidadePessoas.Location = new System.Drawing.Point(24, 180);
+            this.textBoxQuantidadePessoas.Name = "textBoxQuantidadePessoas";
+            this.textBoxQuantidadePessoas.Size = new System.Drawing.Size(49, 20);
+            this.textBoxQuantidadePessoas.TabIndex = 4;
             // 
             // label2
             // 
@@ -101,24 +106,57 @@
             // 
             this.lblValorTotal.AutoSize = true;
             this.lblValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValorTotal.Location = new System.Drawing.Point(384, 44);
+            this.lblValorTotal.Location = new System.Drawing.Point(289, 41);
             this.lblValorTotal.Name = "lblValorTotal";
             this.lblValorTotal.Size = new System.Drawing.Size(72, 20);
             this.lblValorTotal.TabIndex = 7;
             this.lblValorTotal.Text = "R$ 0,00";
+            // 
+            // lblValorPorPessoa
+            // 
+            this.lblValorPorPessoa.AutoSize = true;
+            this.lblValorPorPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorPorPessoa.Location = new System.Drawing.Point(199, 170);
+            this.lblValorPorPessoa.Name = "lblValorPorPessoa";
+            this.lblValorPorPessoa.Size = new System.Drawing.Size(72, 20);
+            this.lblValorPorPessoa.TabIndex = 9;
+            this.lblValorPorPessoa.Text = "R$ 0,00";
+            this.lblValorPorPessoa.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(200, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Valor Por Pessoa:";
+            // 
+            // buttonPagarParte
+            // 
+            this.buttonPagarParte.Location = new System.Drawing.Point(91, 218);
+            this.buttonPagarParte.Name = "buttonPagarParte";
+            this.buttonPagarParte.Size = new System.Drawing.Size(75, 23);
+            this.buttonPagarParte.TabIndex = 10;
+            this.buttonPagarParte.Text = "Pagar Parte";
+            this.buttonPagarParte.UseVisualStyleBackColor = true;
+            this.buttonPagarParte.Click += new System.EventHandler(this.buttonPagarParte_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 288);
+            this.Controls.Add(this.buttonPagarParte);
+            this.Controls.Add(this.lblValorPorPessoa);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblValorTotal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxQuantidadePessoas);
             this.Controls.Add(this.textBoxConsumacao);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonDividirConta);
             this.Controls.Add(this.btnAdicionarConsumacao);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -130,13 +168,16 @@
         #endregion
 
         private System.Windows.Forms.Button btnAdicionarConsumacao;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonDividirConta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxConsumacao;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxQuantidadePessoas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblValorTotal;
+        private System.Windows.Forms.Label lblValorPorPessoa;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonPagarParte;
     }
 }
 
