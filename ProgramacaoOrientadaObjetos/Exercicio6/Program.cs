@@ -10,6 +10,15 @@ namespace Exercicio6
     {
         static void Main(string[] args)
         {
+            Aviao aviao = new Aviao();
+            aviao.Prefixo = "PT-123";
+            aviao.Fabricante = "Embraer";
+            aviao.QuantidadeAssntos = 134;
+            aviao.QuantidadeAssentosOcupados = 12;
+
+            aviao.ImprimirPrefixoAeronave();
+
+            Console.ReadKey();
         }
     }
 }
