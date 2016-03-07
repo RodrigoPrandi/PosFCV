@@ -28,7 +28,7 @@ namespace Aula1.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Veiculo veiculo = db.Veiculos.Find(id);
+            Veiculo veiculo = db.Veiculos.Find(id); 
             if (veiculo == null)
             {
                 return HttpNotFound();
