@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgramacaoOrientadaObjetos", "ProgramacaoOrientadaObjetos", "{5EBD3E42-8F9B-4418-AEBF-D1DEEA7B1205}"
 EndProject
@@ -24,6 +24,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio6", "ProgramacaoOrientadaObjetos\Exercicio6\Exercicio6.csproj", "{DFBD80E7-3A52-448E-AC1B-DA4DC612ACF0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio7-8-9", "ProgramacaoOrientadaObjetos\Exercicio7-8-9\Exercicio7-8-9.csproj", "{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PadroesDeProjetos", "PadroesDeProjetos", "{3089F40E-DA7E-4496-A1A1-40AEE2DCD703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PosDesignPatternsFCV", "PadroesDeProjetos\PosDesignPatternsFCV\PosDesignPatternsFCV.csproj", "{403AE462-5BED-4703-8CDC-A420B5C07D10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mvc1", "Mvc1", "{AF181B4E-2955-4E47-A40E-F07BEDE0A4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula1", "Mvc1\Aula1\Aula1.csproj", "{C302B9A9-C348-48EF-8301-362EEA497953}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +75,14 @@ Global
 		{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7F44C00-6F5A-46CD-BCCD-D02E016227B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{403AE462-5BED-4703-8CDC-A420B5C07D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{403AE462-5BED-4703-8CDC-A420B5C07D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{403AE462-5BED-4703-8CDC-A420B5C07D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{403AE462-5BED-4703-8CDC-A420B5C07D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C302B9A9-C348-48EF-8301-362EEA497953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C302B9A9-C348-48EF-8301-362EEA497953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C302B9A9-C348-48EF-8301-362EEA497953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C302B9A9-C348-48EF-8301-362EEA497953}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,5 +98,7 @@ Global
 		{AB2A9F39-4111-43F0-AF81-C231C44B61CB} = {7CB62E15-441B-4AB7-82A0-A26D21C200B8}
 		{DFBD80E7-3A52-448E-AC1B-DA4DC612ACF0} = {7CB62E15-441B-4AB7-82A0-A26D21C200B8}
 		{A7F44C00-6F5A-46CD-BCCD-D02E016227B6} = {7CB62E15-441B-4AB7-82A0-A26D21C200B8}
+		{403AE462-5BED-4703-8CDC-A420B5C07D10} = {3089F40E-DA7E-4496-A1A1-40AEE2DCD703}
+		{C302B9A9-C348-48EF-8301-362EEA497953} = {AF181B4E-2955-4E47-A40E-F07BEDE0A4D3}
 	EndGlobalSection
 EndGlobal
