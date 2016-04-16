@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Aula3.Models.Products>
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add().Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => @Html.ActionLink("Editar", "Edit", new { id = o.ProductID }));
+    columns.Add(foo => foo.ProductID).Titled("Código").SetWidth(110);
+    columns.Add(foo => foo.ProductName).Titled("Nome").Filterable(true);
+}).WithPaging(20)

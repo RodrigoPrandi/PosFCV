@@ -22,5 +22,7 @@ namespace Aula1.Models
         }
         public DbSet<Veiculo> Veiculos { get; set; }
         public DbSet<Marca> Marcas { get; set; }
+
+        public System.Data.Entity.DbSet<Aula1.Models.Usuario> Usuarios { get; set; }
     }
 }
