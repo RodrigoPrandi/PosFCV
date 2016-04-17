@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Pessoa";
+}
+
+<h2>Pessoa</h2>
+
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<form action="/" method="post">
+    <label for="nome" class="">Nome</label>
+    <input type="text" name="Nome" value="" class="form-control" />
+    <label for="Cpf" class="">Cpf</label>
+    <input type="text" name="Cpf" value="" class="form-control" />
+</form>
+<input type="submit" value="Gravar" class="btn btn-success" />
+
+
+@section scripts{
+    <script>
+        var alteracao = false;
+        var id = null;
+        $(function () {
+            populaTabela();
+            $('input[type=submit]').click(function (event) {
+                event.preventDefault();
+                enviar();
+            })
+        });
+
+        function populaTabela() {
+            $.ajax({
+                url: "/api/pessoa/lista",
+                type: 'GET',
+                dataType: 'json',
+                error: function (x, y, z) {
+                    console.log(x, y, z);
+                },
+                success: function (ret) {
+                    var html = '';
+                    for (var i = 0; i < ret.length; i++) {
+                        html += '<tr><td>' + ret[i].Id + '</td>';
+                        html += '<td>' + ret[i].Nome + '</td>';
+                        html += '<td>' + ret[i].Cpf + '</td>';
+                        html += '<td><a href="#" data-id="' + ret[i].Id +
+                            '" class = "btn btn-danger" onClick="excluir(event, this);">Excluir</a>' +
+                            '<a href="#" class = "btn btn-primary" onClick="alterar(event, this);">Alterar</a> </td></tr>';
+                    }
+                    $('table tbody').empty().append(html);
+                    alteracao = false;
+                    id = null;
+                }
+            });
+        }
+
+        function alterar(event, $this)
+        {
+            event.preventDefault();
+            var tr = $($this).parent().parent();
+            id = tr.children()[0].innerText;
+            $('input[name=Nome]').val(tr.children()[1].innerText);
+            $('input[name=Cpf]').val(tr.children()[2].innerText);
+            alteracao = true
+        }
+
+        function enviar() {
+            var dataToPost = null;
+            if (alteracao)
+            {
+                dataToPost = {
+                    Id : id,
+                    Nome : $('input[name=Nome]').val(),
+                    Cpf : $('input[name=Cpf]').val()
+                }
+            } else {
+                dataToPost = {
+                    Nome: $('input[name=Nome]').val(),
+                    Cpf: $('input[name=Cpf]').val()
+                }
+            }
+            $.ajax({
+                url: alteracao ? "/api/pessoa/alterar/" + id : "/api/pessoa/novo",
+                type: alteracao ? 'PUT' :'POST',
+                dataType: 'json',
+                data: dataToPost,
+                error: function (x, y, z) {
+                    console.log(x, y, z);
+                },
+                success: function (ret) {
+                    populaTabela();
+                    alteracao = false;
+                    id = null;
+                    $('input[type=text]').empty();
+                }
+            });
+        }
+
+        function excluir(event, $this) {
+            event.preventDefault();
+            var id = $($this).data('id');
+            $.ajax({
+                url: "/api/pessoa/excluir/" + id,
+                type: 'DELETE',
+                dataType: 'json',
+                error: function (x, y, z) {
+                    console.log(x, y, z);
+                },
+                success: function (ret) {
+                    populaTabela();
+                    alteracao = false;
+                    id = null;
+                }
+            });
+        }
+    </script>
+}
+
+
+
