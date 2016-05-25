@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatAula", "Mvc2\ChatAula\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AulaNotificacao", "Mvc2\AulaNotificacao\AulaNotificacao.csproj", "{0B911A3B-A8C8-4964-B7AE-FB31EF9D82F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrabalhoFinal", "Mvc2\TrabalhoFinal\TrabalhoFinal.csproj", "{3965A617-1B27-4892-ABB2-C259316B6EB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{0B911A3B-A8C8-4964-B7AE-FB31EF9D82F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B911A3B-A8C8-4964-B7AE-FB31EF9D82F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B911A3B-A8C8-4964-B7AE-FB31EF9D82F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3965A617-1B27-4892-ABB2-C259316B6EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3965A617-1B27-4892-ABB2-C259316B6EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3965A617-1B27-4892-ABB2-C259316B6EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3965A617-1B27-4892-ABB2-C259316B6EB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,5 +164,6 @@ Global
 		{8D35C179-0D86-4807-849D-7AFCC212AD8A} = {307C72AE-9940-4A36-B4F9-842FD4F89584}
 		{9A8DAC95-01D3-42CD-88C6-89D5E3D1EC19} = {307C72AE-9940-4A36-B4F9-842FD4F89584}
 		{0B911A3B-A8C8-4964-B7AE-FB31EF9D82F5} = {307C72AE-9940-4A36-B4F9-842FD4F89584}
+		{3965A617-1B27-4892-ABB2-C259316B6EB1} = {307C72AE-9940-4A36-B4F9-842FD4F89584}
 	EndGlobalSection
 EndGlobal
