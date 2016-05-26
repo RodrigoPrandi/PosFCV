@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Trabalho Final MVC2</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -17,13 +17,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trabalho Final MVC2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Pessoas", "Index", "Pessoas")</li>
+                    <li>@Html.ActionLink("Tarefas", "Index", "Tarefas")</li>
+                    <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,6 +40,68 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="signalr/hubs"></script>
+
+    @*<script>
+        $(function () {
+            var conn = $.connection.chatHub;
+
+            conn.client.enviar = function (msg) {
+                notify(msg);
+            }
+
+
+
+            function notify(msg) {
+                $.notify({
+                    delay: 5000,
+                    message: msg
+                });
+            }
+
+            $.connection.hub.start().done(function () {
+                conn.server.enviar('Entreiii');
+            });
+        });
+
+    </script>*@
+
+    <script>
+            var conn = $.connection.notificationHub;
+
+            conn.client.todoCreated = function (msg) {
+                notify(msg);
+                conn.server.refresh();
+            }
+
+            conn.client.todoModified = function (msg) {
+                notify(msg);
+                conn.server.refresh();
+            }
+
+            conn.client.todoDeleted = function (msg) {
+                notify(msg);
+                conn.server.refresh();
+            }
+
+            conn.client.done = function (msg) {
+                notify(msg);
+            }
+
+            conn.client.error = function (msg) {
+                notify(msg);
+            }
+
+            $.connection.hub.start();
+
+            function notify(msg) {
+                $.notify({
+                    delay: 5000,
+                    message: msg
+                });
+            }
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
