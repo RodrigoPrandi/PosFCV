@@ -1,0 +1,26 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension="cs" #>
+<#@ parameter type="System.String" name="ControllerName" #>
+<#@ parameter type="System.String" name="Namespace" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+
+namespace <#= Namespace #>
+{
+    public class <#= ControllerName #> : ApiController
+    {
+		//Bloco de código
+		<#;
+			var a = 5;
+			var b = 7;
+			var resultado = a + b * b / Math.PI/
+		#>
+
+		//print na tela
+		<#= resultado #>
+    }
+}

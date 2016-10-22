@@ -1,0 +1,34 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension="cs" #>
+<#@ parameter type="System.String" name="ControllerName" #>
+<#@ parameter type="System.String" name="Namespace" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using <#= Namespace.Replace("Controllers", "") #>Models;
+
+namespace <#= Namespace #>
+{
+    public class <#= ControllerName #> : ApiController
+    {
+		private readonly Contexto _db;
+
+		public <#= ControllerName #> (Contexto db)
+		{
+			_db = db;
+		}
+
+		<#
+			var nome = ControllerName.Replace("Controller", "");
+		#>
+
+		[Route("api/<#= ControllerName.Replace("Controller", "").ToLower() #>/lista")]
+		public IEnumerable<<#= ControllerName.Replace("Controller", "") #>> <#= nome #>()
+		{
+			
+		}
+    }
+}
